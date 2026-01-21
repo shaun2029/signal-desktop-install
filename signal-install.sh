@@ -20,6 +20,9 @@ fi
 
 echo "✅ Installing / updating Signal Desktop…"
 
+echo "Removing old APT sources lists ..."
+sudo rm -vf /etc/apt/sources.list.d/signal*
+
 # -------- KEY --------
 if [[ ! -f "$KEYRING" ]]; then
   echo "🔑 Adding Signal signing key..."
